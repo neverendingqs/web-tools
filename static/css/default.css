@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Open Sans';
+  /* https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans */
+  src: url(/webfonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+/* Color scheme: https://github.com/thomaspark/bootswatch/blob/8cb385c1a83a5850c3f3fe79d3042be687412b41/dist/sandstone/bootstrap.css */
+
+body {
+  color: #3e3f3a;
+  height: 94vh;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 6vh;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+nav {
+  background-color: #3e3f3a;
+  height: 6vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #f3eff5;
+  text-decoration: none;
+}
+
+nav li {
+  list-style-type: none;
+  margin: 0 1vw;
+}
+
+nav ul {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .branding {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.container {
+  padding: 1vh 20vw;
+}
