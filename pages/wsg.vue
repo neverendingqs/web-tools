@@ -8,6 +8,21 @@
           Copy All
         </button>
       </div>
+
+      <div class="form-group">
+        <div class="custom-control custom-switch">
+          <input
+            id="capitalizeSwitch"
+            v-model="capitalize"
+            type="checkbox"
+            class="custom-control-input"
+            @change="changeCasing"
+          />
+          <label class="custom-control-label" for="capitalizeSwitch">
+            Capitalize
+          </label>
+        </div>
+      </div>
     </div>
     <Guid v-for="guid in guids" :key="guid" :guid="guid" />
   </div>
@@ -28,6 +43,7 @@ export default {
   },
   data() {
     return {
+      capitalize: false,
       guids: generateGuids(),
       numGuids: 10
     };
@@ -38,9 +54,16 @@ export default {
     }
   },
   methods: {
+    changeCasing() {
+      this.guids = this.capitalize
+        ? this.guids.map((guid) => guid.toUpperCase())
+        : this.guids.map((guid) => guid.toLowerCase());
+    },
+
     generateMoreGuids(numGuids) {
       const numGuidsBounded = Math.max(1, Math.min(999, numGuids));
       this.guids = generateGuids(numGuidsBounded);
+      this.changeCasing();
     }
   }
 };

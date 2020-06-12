@@ -21,6 +21,6 @@ export default {
 input {
   margin: 2px;
   text-align: center;
-  width: 290px !important; /* TODO: fix */
+  width: 325px !important; /* TODO: fix */
 }
 </style>
