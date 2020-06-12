@@ -4,7 +4,7 @@
     <div class="mb-1">
       <div class="form-inline justify-content-center">
         <NumGuids @change="generateMoreGuids" />
-        <button v-clipboard:copy="allGuids" class="btn btn-info">
+        <button v-clipboard:copy="allGuids" class="btn btn-primary">
           Copy All
         </button>
       </div>

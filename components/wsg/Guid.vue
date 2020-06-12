@@ -1,7 +1,7 @@
 <template>
   <div class="form-inline justify-content-center">
     <input v-model="guid" type="text" readonly="" class="form-control" />
-    <button v-clipboard:copy="guid" class="btn btn-info">Copy</button>
+    <button v-clipboard:copy="guid" class="btn btn-primary">Copy</button>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
 <style scoped>
 input {
   margin: 2px;
-  width: 350px;
+  text-align: center;
+  width: 290px !important; /* TODO: fix */
 }
 </style>

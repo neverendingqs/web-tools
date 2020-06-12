@@ -34,3 +34,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+input {
+  margin-right: 2px;
+}
+</style>

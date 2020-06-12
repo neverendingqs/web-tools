@@ -1,15 +1,24 @@
 <template>
   <div>
-    <nav>
-      <div class="branding">
-        <nuxt-link to="/">Tools</nuxt-link>
-      </div>
-      <ul>
-        <li><nuxt-link to="/wsg">Waste Some Guids</nuxt-link></li>
-      </ul>
-    </nav>
+    <Nav />
     <div class="container">
       <nuxt />
     </div>
   </div>
 </template>
+
+<script>
+import Nav from '~/components/Nav.vue';
+
+export default {
+  components: {
+    Nav
+  }
+};
+</script>
+
+<style>
+.container {
+  padding-top: 50px;
+}
+</style>

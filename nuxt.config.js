@@ -23,11 +23,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/static/css/default.css'],
+  css: [],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/clipboard.js'],
+  plugins: ['~/plugins/bootswatch.js', '~/plugins/clipboard.js'],
   /*
    ** Nuxt.js dev-modules
    */
