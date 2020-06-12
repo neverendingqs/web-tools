@@ -14,36 +14,38 @@
   </div>
 </template>
 
-<script>
-import uuid from 'uuid/v4';
+<script lang="ts">
+import { v4 as uuid } from 'uuid';
 import Guid from '~/components/wastesomeguids/Guid.vue';
 import NumGuids from '~/components/wastesomeguids/NumGuids.vue';
-function generateGuids(numGuids = 10) {
+
+function generateGuids(numGuids = 10): string[] {
   return [...Array(numGuids)].map(() => uuid());
 }
+
 export default {
   name: 'App',
   components: {
     Guid,
-    NumGuids
+    NumGuids,
   },
   data() {
     return {
       guids: generateGuids(),
-      numGuids: 10
+      numGuids: 10,
     };
   },
   computed: {
-    allGuids() {
+    allGuids(): string {
       return this.guids.join('\n');
-    }
+    },
   },
   methods: {
-    generateMoreGuids(numGuids) {
+    generateMoreGuids(numGuids: number) {
       const numGuidsBounded = Math.max(1, Math.min(999, numGuids));
       this.guids = generateGuids(numGuidsBounded);
-    }
-  }
+    },
+  },
 };
 </script>
 

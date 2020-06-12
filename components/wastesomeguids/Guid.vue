@@ -11,9 +11,9 @@ export default {
   props: {
     guid: {
       type: String,
-      default: '(none)'
-    }
-  }
+      default: '(none)',
+    },
+  },
 };
 </script>
 
