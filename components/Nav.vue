@@ -16,9 +16,9 @@
         </a>
       </li>
       <li>
-        <a class="nav-link" href="https://string-utils.neverendingqs.com/">
+        <nuxt-link class="nav-link" to="/stringutils">
           String Utils
-        </a>
+        </nuxt-link>
       </li>
       <li>
         <nuxt-link class="nav-link" to="/wsg">Waste Some Guids</nuxt-link>
