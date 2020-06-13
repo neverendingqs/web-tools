@@ -1,7 +1,17 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <nuxt-link class="navbar-brand" to="/">Tools</nuxt-link>
-    <ul class="navbar-nav d-flex justify-content-end ml-auto">
+    <ul class="navbar-nav d-flex justify-content-end">
+      <a
+        class="navbar-brand"
+        href="https://neverendingqs.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        neverendingqs
+      </a>
+      <li>
+        <nuxt-link class="nav-link" to="/">Home</nuxt-link>
+      </li>
       <li>
         <external-link
           classes="nav-link"
@@ -25,6 +35,16 @@
       </li>
       <li>
         <nuxt-link class="nav-link" to="/wsg">Waste Some Guids</nuxt-link>
+      </li>
+    </ul>
+    <ul class="navbar-nav d-flex justify-content-end ml-auto">
+      <li>
+        <external-link
+          classes="nav-link"
+          href="https://github.com/neverendingqs/web-tools"
+        >
+          Source Code
+        </external-link>
       </li>
     </ul>
   </nav>
