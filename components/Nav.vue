@@ -3,12 +3,9 @@
     <nuxt-link class="navbar-brand" to="/">Tools</nuxt-link>
     <ul class="navbar-nav d-flex justify-content-end ml-auto">
       <li>
-        <a
-          class="nav-link"
-          href="https://oauth2-client-shell.neverendingqs.com/"
-        >
+        <nuxt-link class="nav-link" to="/o2cs">
           OAuth 2.0 Client Shell
-        </a>
+        </nuxt-link>
       </li>
       <li>
         <a class="nav-link" href="https://pprint-ndjson.neverendingqs.com/">
