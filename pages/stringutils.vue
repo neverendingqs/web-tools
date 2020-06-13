@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app">
     <h1>String Utilities</h1>
     <section>
       <div class="form-group">

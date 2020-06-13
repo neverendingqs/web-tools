@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <nuxt-link class="navbar-brand" to="/">Tools</nuxt-link>
-    <ul class="navbar-nav d-flex justify-content-end">
+    <ul class="navbar-nav d-flex justify-content-end ml-auto">
       <li>
         <a
           class="nav-link"
