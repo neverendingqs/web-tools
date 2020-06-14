@@ -1,5 +1,7 @@
 # web-tools
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/abafb0e4-c0bd-4532-9b28-3b1bfcb34f66/deploy-status)](https://app.netlify.com/sites/neverendingqs-tools/deploys)
+
 > A collection of tools.
 
 ## Build Setup
