@@ -81,10 +81,13 @@ import {
 } from 'lodash';
 
 import { parse, stringify } from 'csv/lib/sync';
+import yaml from 'js-yaml';
 
 const alwaysSplitOnNewLineFunctions = new Set([
   'CSV to JSON Array',
   'JSON Array to CSV',
+  'JSON to YAML',
+  'YAML to JSON',
 ]);
 
 function csvToJsonArray(input) {
@@ -99,6 +102,22 @@ function jsonArrayToCsv(input) {
   try {
     const obj = JSON.parse(input);
     return stringify(obj, { header: true });
+  } catch (err) {
+    return err;
+  }
+}
+
+function jsonToYaml(input) {
+  try {
+    return yaml.safeDump(JSON.parse(input));
+  } catch (err) {
+    return err;
+  }
+}
+
+function yamlToJson(input) {
+  try {
+    return JSON.stringify(yaml.safeLoad(input), null, 2);
   } catch (err) {
     return err;
   }
@@ -120,6 +139,7 @@ export default {
         'HTML Escape (Simple)': escape,
         'HTML Unescape (Simple)': unescape,
         'JSON Array to CSV': jsonArrayToCsv,
+        'JSON to YAML': jsonToYaml,
         'Kebab Case': kebabCase,
         'Lower Case (Words)': lowerCase,
         'Lower Case (String': toLower,
@@ -138,6 +158,7 @@ export default {
         'URI Encode': encodeURI,
         'URI Encode Component': encodeURIComponent,
         Words: words,
+        'YAML to JSON': yamlToJson,
       },
       selectedFunction: 'Base64 Decode',
       splitOnNewLine: true,

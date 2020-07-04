@@ -15,6 +15,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "csv": "^5.3.2",
+    "js-yaml": "^3.14.0",
     "lodash": "^4.17.15",
     "nuxt": "^2.13.3",
     "vue-clipboard2": "^0.3.1"
