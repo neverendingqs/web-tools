@@ -55,7 +55,7 @@ import ExternalLink from '~/components/ExternalLink';
 
 export default {
   components: {
-    ExternalLink
-  }
+    ExternalLink,
+  },
 };
 </script>

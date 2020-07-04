@@ -32,6 +32,7 @@
             v-model="splitOnNewLine"
             type="checkbox"
             class="custom-control-input"
+            :disabled="splitOnNewLineSwitchIsDisabled"
             @change="updateOutput"
           />
           <label class="custom-control-label" for="splitOnNewLineSwitch">
@@ -76,8 +77,33 @@ import {
   unescape,
   upperCase,
   upperFirst,
-  words
+  words,
 } from 'lodash';
+
+import { parse, stringify } from 'csv/lib/sync';
+
+const alwaysSplitOnNewLineFunctions = new Set([
+  'CSV to JSON Array',
+  'JSON Array to CSV',
+]);
+
+function csvToJsonArray(input) {
+  try {
+    return JSON.stringify(parse(input, { columns: true }), null, 2);
+  } catch (err) {
+    return err;
+  }
+}
+
+function jsonArrayToCsv(input) {
+  try {
+    const obj = JSON.parse(input);
+    return stringify(obj, { header: true });
+  } catch (err) {
+    return err;
+  }
+}
+
 export default {
   name: 'App',
   components: {},
@@ -89,9 +115,11 @@ export default {
         'Base64 Encode': atob,
         'Camel Case': camelCase,
         Capitalize: capitalize,
+        'CSV to JSON Array': csvToJsonArray,
         Deburr: deburr,
         'HTML Escape (Simple)': escape,
         'HTML Unescape (Simple)': unescape,
+        'JSON Array to CSV': jsonArrayToCsv,
         'Kebab Case': kebabCase,
         'Lower Case (Words)': lowerCase,
         'Lower Case (String': toLower,
@@ -109,16 +137,25 @@ export default {
         'URI Decode Component': decodeURIComponent,
         'URI Encode': encodeURI,
         'URI Encode Component': encodeURIComponent,
-        Words: words
+        Words: words,
       },
       selectedFunction: 'Base64 Decode',
       splitOnNewLine: true,
-      output: ''
+      splitOnNewLineSwitchIsDisabled: false,
+      output: '',
     };
   },
   methods: {
     updateOutput() {
       const f = this.functions[this.selectedFunction];
+
+      if (alwaysSplitOnNewLineFunctions.has(this.selectedFunction)) {
+        this.splitOnNewLine = false;
+        this.splitOnNewLineSwitchIsDisabled = true;
+      } else {
+        this.splitOnNewLineSwitchIsDisabled = false;
+      }
+
       try {
         this.output = this.splitOnNewLine
           ? this.input
@@ -129,8 +166,8 @@ export default {
       } catch (err) {
         this.output = err;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
