@@ -10,12 +10,12 @@ export default {
   props: {
     classes: {
       type: String,
-      default: ''
+      default: '',
     },
     href: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+  },
 };
 </script>

@@ -39,19 +39,19 @@ export default {
   name: 'App',
   components: {
     Guid,
-    NumGuids
+    NumGuids,
   },
   data() {
     return {
       capitalize: false,
       guids: generateGuids(),
-      numGuids: 10
+      numGuids: 10,
     };
   },
   computed: {
     allGuids() {
       return this.guids.join('\n');
-    }
+    },
   },
   methods: {
     changeCasing() {
@@ -64,8 +64,8 @@ export default {
       const numGuidsBounded = Math.max(1, Math.min(999, numGuids));
       this.guids = generateGuids(numGuidsBounded);
       this.changeCasing();
-    }
-  }
+    },
+  },
 };
 </script>
 

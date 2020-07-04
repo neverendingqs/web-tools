@@ -24,14 +24,14 @@ export default {
   props: {},
   data() {
     return {
-      numGuids: 10
+      numGuids: 10,
     };
   },
   methods: {
     onChange() {
       this.$emit('change', this.numGuids);
-    }
-  }
+    },
+  },
 };
 </script>
 
