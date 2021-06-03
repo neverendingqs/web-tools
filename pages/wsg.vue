@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import Guid from '~/components/wsg/Guid.vue';
 import NumGuids from '~/components/wsg/NumGuids.vue';
 function generateGuids(numGuids = 10) {
-  return [...Array(numGuids)].map(() => uuidv4());
+  return [...Array(numGuids)].map(() => uuid());
 }
 export default {
   name: 'App',
