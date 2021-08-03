@@ -29,9 +29,7 @@
         </external-link>
       </li>
       <li>
-        <nuxt-link class="nav-link" to="/stringutils">
-          String Utils
-        </nuxt-link>
+        <nuxt-link class="nav-link" to="/stringutils">String Utils</nuxt-link>
       </li>
       <li>
         <nuxt-link class="nav-link" to="/wsg">Waste Some Guids</nuxt-link>

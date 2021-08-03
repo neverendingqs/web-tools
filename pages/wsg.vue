@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import Guid from '~/components/wsg/Guid.vue';
 import NumGuids from '~/components/wsg/NumGuids.vue';
 function generateGuids(numGuids = 10) {
