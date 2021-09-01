@@ -14,10 +14,10 @@
   "dependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
-    "csv": "^5.5.0",
+    "csv": "^5.5.2",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "uuid": "^8.3.2",
     "vue-clipboard2": "^0.3.1"
   },
@@ -29,7 +29,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": ">=2.0.0",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.3.2"
   }
 }
