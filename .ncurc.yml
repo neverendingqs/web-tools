@@ -1,2 +1,5 @@
 reject:
   - bootswatch
+  # Had trouble in https://github.com/neverendingqs/web-tools/pull/51
+  # Try again later
+  - csv

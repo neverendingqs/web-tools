@@ -80,7 +80,7 @@ import {
   words,
 } from 'lodash';
 
-import { parse, stringify } from 'csv/sync';
+import { parse, stringify } from 'csv/lib/sync';
 import yaml from 'js-yaml';
 
 const alwaysSplitOnNewLineFunctions = new Set([
