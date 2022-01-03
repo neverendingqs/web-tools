@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
-    "csv": "^6.0.4",
+    "csv": "^6.0.5",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "nuxt": "^2.15.8",
